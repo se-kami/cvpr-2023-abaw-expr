@@ -27,5 +27,5 @@ python train.py
 ```
 
 ## References
-[POSTER_V2](https://github.com/talented-q/poster_v2)
+[POSTER_V2](https://github.com/talented-q/poster_v2) \
 [ViT](https://github.com/huggingface/pytorch-image-models)
