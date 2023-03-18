@@ -1,4 +1,4 @@
-# CFER: Confidence-Aware Anchor Vision Transformer Framework for Robust Facial Expression Recognition
+# CAFEL: Confidence-Aware Uncertainty Balancing for Robust Facial Expression Learning
 ## Authors: Raima Islam, Azmine Toushik Wasi, Taki Hasan Rafi, Ahnaf Tahmid Saad, Dong-Kyu Chae
 
 ## Architecture
