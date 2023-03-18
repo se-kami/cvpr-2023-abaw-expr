@@ -25,15 +25,10 @@ class CenterLoss(nn.Module):
         self.n_classes = n_classes
         self.reduction = reduction
 
-    def forward(self, anchors, embeddings, labels, confidence):
-        n_classes, k, dim_emb = anchors.shape
-        factor = math.sqrt(dim_emb)
-        anchors = anchors[labels]  # [batch, k, emb]
-        distances = (anchors - embeddings.unsqueeze(1)) ** 2  # [batch, k, emb]
-        distances = distances.sum(-1)  # [batch, k]
-        distances = torch.sqrt(distances)  # [batch, k]
-        distances = torch.min(distances, 1).values  # [batch]
-        loss = distances * confidence / factor  # [batch]
+    def forward(self, distances, labels, confidence):
+        distances = distances[range(len(labels)), labels]
+        distances = torch.min(distances, 1)
+        loss = distances * confidence.view(-1)
         if self.reduction == 'mean':
             return loss.sum() / len(loss)
         return loss.sum()

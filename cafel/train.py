@@ -117,7 +117,7 @@ def train(config):
         # loss
         loss_ce = loss_fn_ce(prob_dist_corrected, y)  # cross entropy with temperature
         loss_mu = loss_fn_mu(anchors.get_anchors())  # keep anchors apart
-        loss_center = loss_fn_center(anchors.get_anchors(), embeddings, y, confidence)  # keep embeddings in the right cluster
+        loss_center = loss_fn_center(distances, y, confidence)  # keep embeddings in the right cluster
         loss = lambda_ce * loss_ce + lambda_mu * loss_mu * trust + lambda_center * loss_center * trust  # total loss
         optimizer.zero_grad()
         loss.backward()
