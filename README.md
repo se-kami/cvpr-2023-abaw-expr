@@ -1,5 +1,5 @@
 # CAFEL: Confidence-Aware Uncertainty Balancing for Robust Facial Expression Learning
-## Authors: Raima Islam, Azmine Toushik Wasi, Taki Hasan Rafi, Ahnaf Tahmid Saad, Dong-Kyu Chae
+## Authors: Raima Islam, Azmine Toushik Wasi, Karlo Serbetar, Taki Hasan Rafi, Ahnaf Tahmid Saad, Dong-Kyu Chae
 
 ## Architecture
 Modified POSTER_V2 followed by anchor label correction network.
