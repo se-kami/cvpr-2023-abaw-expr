@@ -10,6 +10,7 @@ Modified POSTER_V2 followed by anchor label correction network.
 ## Results
 Results on AffWild2 dataset.
 | Method   | F1   |
+|:--------:|:----:|
 | POSTER++ | 0.31 |
 | CFER     | 0.35 |
 
